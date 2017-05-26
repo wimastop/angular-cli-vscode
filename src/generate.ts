@@ -28,7 +28,6 @@ export class Generate {
   static showPickTypeDialog(args): Q.Promise<GenerateOption> {
     const deferred: Q.Deferred<GenerateOption> = Q.defer<GenerateOption>();
     window.showQuickPick(GenerateQuickPickItems).then((result) => {
-      console.log(result);
       deferred.resolve({ cwd: getFolderPath(args), type: result.label });
     });
     return deferred.promise;
@@ -50,11 +49,10 @@ export class Generate {
     return deferred.promise;
   }
 
-  static generateComponent(option) {
-    Environment.execSync(this.getCommond(option.name, option.type), option.cwd);
-  }
-
-  private static getCommond(name, type) {
-    return `ng g ${type} ${name}`;
+  static generateComponent(option): Q.Promise<GenerateOption> {
+    const deferred: Q.Deferred<GenerateOption> = Q.defer<GenerateOption>();
+    const result = Environment.execSync(`ng g ${option.type} ${option.name}`, option.cwd);
+    window.showInformationMessage(result);
+    return deferred.promise;
   }
 }

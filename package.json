@@ -2,7 +2,7 @@
   "name": "angular-cli-vscode",
   "displayName": "angular-cli-vscode",
   "description": "Angular CLI commands to your Visual Studio Code project",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "lf-team",
   "icon": "images/angular.jpg",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -36,16 +36,20 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [{
-      "command": "extension.ngGenerate",
-      "title": "ngGenerate"
-    }],
-    "menus": {
-      "explorer/context": [{
-        "when": "",
+    "commands": [
+      {
         "command": "extension.ngGenerate",
-        "group": "Angular Cli"
-      }]
+        "title": "ngGenerate"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "",
+          "command": "extension.ngGenerate",
+          "group": "Angular Cli"
+        }
+      ]
     }
   },
   "scripts": {
@@ -63,7 +67,6 @@
     "vscode": "^1.1.0"
   },
   "dependencies": {
-    "@angular/cli": "^1.0.6",
     "q": "^1.5.0"
   }
 }

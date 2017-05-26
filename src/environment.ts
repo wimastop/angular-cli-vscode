@@ -6,6 +6,7 @@ import { getFolderPath } from './util';
 export class Environment {
 
   static execSync(commands: string, cwd: string) {
+    console.log(commands, cwd);
     return childProcess.execSync(commands, { cwd: cwd }).toString().trim();
   }
 
