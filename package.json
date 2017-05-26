@@ -1,18 +1,38 @@
 {
   "name": "angular-cli-vscode",
   "displayName": "angular-cli-vscode",
-  "description": "",
+  "description": "Angular CLI commands to your Visual Studio Code project",
   "version": "0.0.1",
   "publisher": "wimas",
   "icon": "images/icon.svg",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "Wimas"
+  },
   "engines": {
     "vscode": "^1.12.0"
   },
+  "keywords": [
+    "Angular",
+    "Angular 2",
+    "Angular 4",
+    "TypeScript",
+    "Angular CLI"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sishenwuda/angular-cli-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/sishenwuda/angular-cli-vscode/issues"
+  },
   "categories": [
-    "Other"
+    "Languages",
+    "Other",
+    "Snippets"
   ],
   "activationEvents": [
-    "onCommand:extension.ngGenerate"
+    "*"
   ],
   "main": "./out/src/extension",
   "contributes": {
