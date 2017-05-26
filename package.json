@@ -3,7 +3,7 @@
   "displayName": "angular-cli-vscode",
   "description": "Angular CLI commands to your Visual Studio Code project",
   "version": "0.0.1",
-  "publisher": "wimas",
+  "publisher": "lf-team",
   "icon": "images/angular.jpg",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": {
