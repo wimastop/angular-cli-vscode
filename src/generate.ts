@@ -28,7 +28,11 @@ export class Generate {
   static showPickTypeDialog(args): Q.Promise<GenerateOption> {
     const deferred: Q.Deferred<GenerateOption> = Q.defer<GenerateOption>();
     window.showQuickPick(GenerateQuickPickItems).then((result) => {
-      deferred.resolve({ cwd: getFolderPath(args), type: result.label });
+      if (result && result.label) {
+        deferred.resolve({ cwd: getFolderPath(args), type: result.label });
+      } else {
+        window.showWarningMessage('Not picker generate type.');
+      }
     });
     return deferred.promise;
   }
