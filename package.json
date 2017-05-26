@@ -4,6 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "wimas",
+  "icon": "images/icon.svg",
   "engines": {
     "vscode": "^1.12.0"
   },
@@ -15,20 +16,16 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.ngGenerate",
-        "title": "ngGenerate"
-      }
-    ],
+    "commands": [{
+      "command": "extension.ngGenerate",
+      "title": "ngGenerate"
+    }],
     "menus": {
-      "explorer/context": [
-        {
-          "when": "",
-          "command": "extension.ngGenerate",
-          "group": "Angular Cli"
-        }
-      ]
+      "explorer/context": [{
+        "when": "",
+        "command": "extension.ngGenerate",
+        "group": "Angular Cli"
+      }]
     }
   },
   "scripts": {
