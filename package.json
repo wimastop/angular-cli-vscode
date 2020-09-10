@@ -6,6 +6,7 @@
   "publisher": "lf-team",
   "icon": "images/angular.jpg",
   "license": "SEE LICENSE IN LICENSE.md",
+  "enableProposedApi": true,
   "author": {
     "name": "Wimas"
   },
@@ -38,19 +39,94 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.ngGenerate",
-        "title": "ngGenerate"
+        "command": "extension.pipe",
+        "title": "Pipe"
+      },
+      {
+        "command": "extension.guard",
+        "title": "Guard"
+      },
+      {
+        "command": "extension.directive",
+        "title": "Directive"
+      },
+      {
+        "command": "extension.interface",
+        "title": "Interface"
+      },
+      {
+        "command": "extension.class",
+        "title": "Class"
+      },
+      {
+        "command": "extension.enum",
+        "title": "Enum"
+      },
+      {
+        "command": "extension.component",
+        "title": "Component"
+      },
+      {
+        "command": "extension.service",
+        "title": "Service"
+      },
+      {
+        "command": "extension.module",
+        "title": "Module"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "when": "",
-          "command": "extension.ngGenerate",
-          "group": "Angular Cli"
+          "submenu": "Angular Generator",
+          "group": "Angular Generator"
+        }
+      ],
+      "Angular Generator": [
+        {
+          "group": "A@Angular Generator Type",
+          "command": "extension.pipe"
+        },
+        {
+          "group": "A@Angular Generator Type",
+          "command": "extension.guard"
+        },
+        {
+          "group": "A@Angular Generator Type",
+          "command": "extension.directive"
+        },
+        {
+          "group": "B@Angular Generator Type",
+          "command": "extension.interface"
+        },
+        {
+          "group": "B@Angular Generator Type",
+          "command": "extension.class"
+        },
+        {
+          "group": "B@Angular Generator Type",
+          "command": "extension.enum"
+        },
+        {
+          "group": "Z@Angular Generator Type",
+          "command": "extension.component"
+        },
+        {
+          "group": "Z@Angular Generator Type",
+          "command": "extension.service"
+        },
+        {
+          "group": "Z@Angular Generator Type",
+          "command": "extension.module"
         }
       ]
-    }
+    },
+    "submenus": [
+      {
+				"id": "Angular Generator",
+        "label": "Angular Generator"
+			}
+    ]
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
