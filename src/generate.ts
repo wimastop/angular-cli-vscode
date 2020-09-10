@@ -41,7 +41,7 @@ export class Generate {
     const deferred: Q.Deferred<GenerateOption> = Q.defer<GenerateOption>();
     window.showInputBox({
       prompt: '请输入你要自动生成的文件名称',
-      placeHolder: 'Generate name'
+      placeHolder: `Generate ${args.type} name`
     }).then((fileName) => {
       if (!fileName || /[~`!#$%\^&*+=\[\]\\';,/{}|\\":<>\?\s]/g.test(fileName)) {
         deferred.reject('That\'s not a valid name! (no whitespaces or special characters)');
