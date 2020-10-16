@@ -2,7 +2,7 @@
   "name": "angular-cli-vscode",
   "displayName": "angular-cli-vscode",
   "description": "Angular CLI commands to your Visual Studio Code project",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "lf-team",
   "icon": "images/angular.jpg",
   "license": "SEE LICENSE IN LICENSE.md",
